@@ -46,7 +46,7 @@ Service and Version Detection Scan
 
 
 <details>
-    <summary><b>tcpsyn output</b></summary>
+    <summary><b>TCP_SYN output</b></summary>
 
     Nmap scan report for 192.168.74.133
      Host is up (0.0025s latency).
