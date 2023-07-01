@@ -24,7 +24,7 @@ This project is split into three repositories where this repository will provide
 <h3>TCP SYN Scan</h3>
 
 ```bash
-$ nmap -sS 192.168.74.133
+  nmap -sS 192.168.74.133
 
 ```
 
