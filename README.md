@@ -207,7 +207,7 @@ A quick search on this partcular service version will show that it is vulnerable
 
 <h2>Scanning with NSE Scripts </h2>
 
-SQL Injection Vulnerability Scan
+<h4>SQL Injection Vulnerability Scan</h4>
 
 ```bash
 $ nmap --script http-sql-injection -p 80,443 192.168.74.133
