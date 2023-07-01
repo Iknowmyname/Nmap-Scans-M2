@@ -19,6 +19,9 @@ This project is split into three repositories where this repository will provide
 - <b>[Metasploitable2https://github.com/joshmadakor1/4chan-Image-Analysis-Middleware-C964)</b> (Vulnerable Virtual Machine)
 
 
+<br />
+<br />
+
 <h2>Performing Port Scans</h2>
 
 
@@ -209,6 +212,9 @@ A quick search on this partcular service version will show that it is vulnerable
 
 <h2>Scanning with NSE Scripts </h2>
 
+<br />
+<br />
+
 <h4>SQL Injection Vulnerability Scan</h4>
 
 ```bash
@@ -319,56 +325,7 @@ $ sudo nmap -sV -p0-65535 --script vulners 192.168.74.133
 The sV flag is used for this particular scan as the vulners script would require information regarding the version of the service to determine the CVE based on the corresponding version. This script leverages the vulnerability database from Vulners.com to detect the known vulnerabilities. The output shows the vulnerabilities detected and also provides a link to the CVE in order to assess and determine the severity of the CVE.
 
 
-# Output
-CVEScannerV2 will show all CVEs related to every _service-version_ discovered.
 
-<details>
-    <summary><b>cvescannerv2.nse output</b></summary>
-
-    PORT      STATE    SERVICE        VERSION
-    22/tcp    open  ssh                  OpenSSH 7.1 (protocol 2.0)
-    | cvescannerv2:
-    |   product: openssh
-    |   version: 7.1
-    |   vupdate: *
-    |   cves: 27
-    |   	CVE ID              	CVSSv2	CVSSv3	ExploitDB 	Metasploit
-    |   	CVE-2008-3844       	9.3  	-    	No        	No
-    |   	CVE-2016-8858       	7.8  	7.5  	No        	No
-    |   	CVE-2016-6515       	7.8  	7.5  	Yes       	No
-    |   	CVE-2016-1908       	7.5  	9.8  	No        	No
-    |   	CVE-2016-10009      	7.5  	7.3  	Yes       	No
-    |   	CVE-2015-8325       	7.2  	7.8  	No        	No
-    |   	CVE-2016-10012      	7.2  	7.8  	No        	No
-    |   	CVE-2016-10010      	6.9  	7.0  	Yes       	No
-    |   	CVE-2020-15778      	6.8  	7.8  	No        	No
-    |_  	CVE-2019-6111       	5.8  	5.9  	Yes       	No
-    ...
-    ...
-    3306/tcp  open  mysql                MySQL 5.5.20-log
-    | cvescannerv2:
-    |   product: mysql
-    |   version: 5.5.20
-    |   vupdate: *
-    |   cves: 541
-    |   	CVE ID              	CVSSv2	CVSSv3	ExploitDB 	Metasploit
-    |   	CVE-2012-2750       	10.0 	-    	No        	No
-    |   	CVE-2016-6662       	10.0 	9.8  	Yes       	No
-    |   	CVE-2012-3163       	9.0  	-    	No        	No
-    |   	CVE-2020-14878      	7.7  	8.0  	No        	No
-    |   	CVE-2013-1492       	7.5  	-    	No        	No
-    |   	CVE-2014-0001       	7.5  	-    	No        	No
-    |   	CVE-2018-2562       	7.5  	7.1  	No        	No
-    |   	CVE-2014-6500       	7.5  	-    	No        	No
-    |   	CVE-2014-6491       	7.5  	-    	No        	No
-    |_  	CVE-2012-0553       	7.5  	-    	No        	No
-    ...
-    ...
-</details>
-
-<p align="center">
-<img src="https://i.imgur.com/UeNTKzL.png" height="65%" width="65%" alt="Image Analysis Dataflow"/>
-</p>
 
 <!--
  ```diff
