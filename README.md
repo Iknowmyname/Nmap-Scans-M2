@@ -28,6 +28,58 @@ $ nmap -sS 192.168.74.133
 
 ```
 
+<details>
+    <summary><b>tcpsyn output</b></summary>
+
+    Nmap scan report for 192.168.74.133
+     Host is up (0.0025s latency).
+     Not shown: 977 closed tcp ports (reset)
+     PORT     STATE SERVICE
+     21/tcp   open  ftp
+     22/tcp   open  ssh
+     23/tcp   open  telnet
+     25/tcp   open  smtp
+     53/tcp   open  domain
+     80/tcp   open  http
+     111/tcp  open  rpcbind
+     139/tcp  open  netbios-ssn
+     445/tcp  open  microsoft-ds
+     512/tcp  open  exec
+     513/tcp  open  login
+     514/tcp  open  shell
+     1099/tcp open  rmiregistry
+     1524/tcp open  ingreslock
+     2049/tcp open  nfs
+     2121/tcp open  ccproxy-ftp
+     3306/tcp open  mysql
+     5432/tcp open  postgresql
+     5900/tcp open  vnc
+     6000/tcp open  X11
+     6667/tcp open  irc
+     8009/tcp open  ajp13
+     8180/tcp open  unknown
+
+    ...
+    ...
+</details>
+<br />
+<br />
+
+The TCP SYN Scan is the most widely used scan with Nmap. A TCP SYN packet will be sent to the vulnerable virtual machine's ports and if the port is open it will respond with a SYN-ACK packet back as an acknowledgement to say that the port is open. This scan does not establish a full TCP connection as Nmap will send a RST packet to erase the connection which makes it a quicka and stealthy scan.
+Service and Version Detection Scan
+
+
+
+
+
+
+<h3>TCP SYN Scan</h3>
+
+```bash
+$ nmap -sS 192.168.74.133
+
+```
+
 <br />
 <br />
 <p align="center">
