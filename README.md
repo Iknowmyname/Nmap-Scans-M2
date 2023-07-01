@@ -217,215 +217,62 @@ $ nmap --script http-sql-injection -p 80,443 192.168.74.133
 <br />
 <br />
 
+```bash
 
-<details>
-    <summary><b>TCP_SYN output</b></summary>
+PORT    STATE  SERVICE
+80/tcp  open   http
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://192.168.74.133:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=php-errors.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=usage-instructions.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?do=toggle-hints%27%20OR%20sqlspider&page=home.php
+|     http://192.168.74.133:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=notes.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?do=toggle-security%27%20OR%20sqlspider&page=home.php
+|     http://192.168.74.133:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/?page=login.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
+|     http://192.168.74.133:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
+|   Possible sqli for forms:
+|     Form at path: /mutillidae/index.php, form's action: index.php. Fields that might be vulnerable:
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|       choice
+|_      initials
+443/tcp closed https
 
 
-    PORT    STATE  SERVICE
-    80/tcp  open   http
-    | http-sql-injection: 
-    |   Possible sqli for queries:
-    |     http://192.168.74.133:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=php-errors.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=usage-instructions.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?do=toggle-hints%27%20OR%20sqlspider&page=home.php
-    |     http://192.168.74.133:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=notes.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?do=toggle-security%27%20OR%20sqlspider&page=home.php
-    |     http://192.168.74.133:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=password-generator.php%27%20OR%20sqlspider&username=anonymous
-    |     http://192.168.74.133:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/dav/?C=N%3BO%3DD%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/oops/TWiki/TWikiHistory?template=oopsrev%27%20OR%20sqlspider&param1=1.10
-    |     http://192.168.74.133:80/oops/TWiki/TWikiHistory?template=oopsrev&param1=1.10%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.8%27%20OR%20sqlspider&rev1=1.9
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.8&rev1=1.9%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.7%27%20OR%20sqlspider&rev1=1.8
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.7&rev1=1.8%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/view/TWiki/TWikiHistory?rev=1.7%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.9%27%20OR%20sqlspider&rev1=1.10
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.9&rev1=1.10%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/view/TWiki/TWikiHistory?rev=1.9%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/view/TWiki/TWikiHistory?rev=1.8%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/oops/TWiki/TWikiHistory?template=oopsrev%27%20OR%20sqlspider&param1=1.10
-    |     http://192.168.74.133:80/oops/TWiki/TWikiHistory?template=oopsrev&param1=1.10%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.8%27%20OR%20sqlspider&rev1=1.9
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.8&rev1=1.9%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.7%27%20OR%20sqlspider&rev1=1.8
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.7&rev1=1.8%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/view/TWiki/TWikiHistory?rev=1.7%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.9%27%20OR%20sqlspider&rev1=1.10
-    |     http://192.168.74.133:80/rdiff/TWiki/TWikiHistory?rev2=1.9&rev1=1.10%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/view/TWiki/TWikiHistory?rev=1.9%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/view/TWiki/TWikiHistory?rev=1.8%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Fcollections%2Fjdruin%2Fpr%2F
-    |     http://192.168.74.133:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fpauldotcom.com%2F
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.isd-podcast.com%2F
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.php.net%2F
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.room362.com%2F
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.pocodoy.com%2Fblog%2F
-    |     http://192.168.74.133:80/mutillidae/index.php?page=password-generator.php%27%20OR%20sqlspider&username=anonymous
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.issa-kentuckiana.org%2F
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.owasp.org
-    |     http://192.168.74.133:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.irongeek.com%2F
-    |     http://192.168.74.133:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=redirectandlog.php%27%20OR%20sqlspider&forwardurl=http%3A%2F%2Fwww.owasp.org%2Findex.php%2FLouisville
-    |     http://192.168.74.133:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=password-generator.php%27%20OR%20sqlspider&username=anonymous
-    |     http://192.168.74.133:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=password-generator.php%27%20OR%20sqlspider&username=anonymous
-    |     http://192.168.74.133:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-    |     http://192.168.74.133:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-    |   Possible sqli for forms:
-    |     Form at path: /mutillidae/index.php, form's action: index.php. Fields that might be vulnerable:
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |       choice
-    |_      initials
-    443/tcp closed https
 
-    
-</details>
+```
+
+
 
 
 <br />
