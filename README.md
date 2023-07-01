@@ -93,7 +93,7 @@ Cross Site Request Forgery Scan
 Several CSRF vulnerabilities were detected by scanning with the http-csrf script. 
 
 
-Scanning with Vulners Script
+<h2>Scanning with Vulners Script</h2>
 
 <br />
 <br />
