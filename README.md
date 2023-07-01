@@ -1,6 +1,6 @@
 # Nmap-Scans-M2
 
-<h1>Nmap Scans on Vulnerable Virtual Machine</h1>
+
 
 
 <h2>
@@ -12,9 +12,7 @@ This project is split into three repositories where this repository will provide
 <br />
 <br />
 
-<p align="center">
-<img src="https://i.imgur.com/Q46tijN.png" height="65%" width="65%" alt="Frankie Grande, Ariana Grande et al. are posing for a picture"/>
-</p>
+
 <h2>Virtual Machines Used</h2>
 
 - <b>Kali Linux</b> 
@@ -25,7 +23,7 @@ This project is split into three repositories where this repository will provide
 Service and Version Detection Scan
 
 <p align="center">
-<img src="https://i.imgur.com/UeNTKzL.png" height="65%" width="65%" alt="Image Analysis Dataflow"/>
+<img src="https://i.imgur.com/Q46tijN.png" height="65%" width="65%" alt="Frankie Grande, Ariana Grande et al. are posing for a picture"/>
 </p>
 
 
