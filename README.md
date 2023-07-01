@@ -302,7 +302,7 @@ $ nmap -sV --script http-csrf 192.168.74.133
 ```
 
 <br />
-<br />
+
 
 Output:
 
