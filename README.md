@@ -79,6 +79,7 @@ SQL Injection Vulnerability Scan
 <img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
 </p>
 
+The SQL injection script is used to scan for any SQLi vulnerabilities as from the previous TCP SYN scan it showed the MySQL port status as "OPEN". The output of the scan shows several SQL queries which are vulnerable to SQL injections. The index.php of the web address also contains a SQLi vulnerability which would allow attackers to exploit and gain access to vital parts of the machine server. 
 
 Cross Site Request Forgery Scan
 
@@ -90,6 +91,19 @@ Cross Site Request Forgery Scan
 </p>
 
 Several CSRF vulnerabilities were detected by scanning with the http-csrf script. 
+
+
+Scanning with Vulners Script
+
+<br />
+<br />
+
+<p align="center">
+<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
+</p>
+
+The sV flag is used for this particular scan as the vulners script would require information regarding the version of the service to determine the CVE based on the corresponding version. This script leverages the vulnerability database from Vulners.com to detect the known vulnerabilities. The output shows the vulnerabilities detected and also provides a link to the CVE in order to assess and determine the severity of the CVE.
+
 
 # Output
 CVEScannerV2 will show all CVEs related to every _service-version_ discovered.
