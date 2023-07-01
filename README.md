@@ -32,6 +32,11 @@ This project is split into three repositories where this repository will provide
 The TCP SYN Scan is the most widely used scan with Nmap. A TCP SYN packet will be sent to the vulnerable virtual machine's ports and if the port is open it will respond with a SYN-ACK packet back as an acknowledgement to say that the port is open. This scan does not establish a full TCP connection as Nmap will send a RST packet to erase the connection which makes it a quicka and stealthy scan.
 Service and Version Detection Scan
 
+```bash
+$ nmap -sS 192.168.74.133
+
+```
+
 <h3>UDP Scan</h3>
 
 <br />
