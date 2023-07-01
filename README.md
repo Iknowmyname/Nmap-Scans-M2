@@ -291,7 +291,10 @@ PORT    STATE  SERVICE
 
 The SQL injection script is used to scan for any SQLi vulnerabilities as from the previous TCP SYN scan it showed the MySQL port status as "OPEN". The output of the scan shows several SQL queries which are vulnerable to SQL injections. The index.php of the web address also contains a SQLi vulnerability which would allow attackers to exploit and gain access to vital parts of the machine server. 
 
-Cross Site Request Forgery Scan
+<br />
+<br />
+
+<h4>Cross Site Request Forgery Scan</h4>
 
 ```bash
 $ nmap -sV --script http-csrf 192.168.74.133
@@ -404,11 +407,12 @@ Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: U
 
 ```
 
-<p align="center">
-<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
-</p>
+
 
 Several CSRF vulnerabilities were detected by scanning with the http-csrf script. 
+
+<br />
+<br />
 
 
 <h2>Scanning with Vulners Script</h2>
