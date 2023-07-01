@@ -20,7 +20,27 @@ This project is split into three repositories where this repository will provide
 
 
 <h2>Performing Port Scans</h2>
+
+TCP SYN Scan
+
+<br />
+<br />
+<p align="center">
+<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/Service%20%26%20Version%20Detection%20Scan.PNG" height="65%" width="65%" alt="sV"/>
+</p>
+
+The TCP SYN Scan is the most widely used scan with Nmap. A TCP SYN packet will be sent to the vulnerable virtual machine's ports and if the port is open it will respond with a SYN-ACK packet back as an acknowledgement to say that the port is open. This scan does not establish a full TCP connection as Nmap will send a RST packet to erase the connection which makes it a quicka and stealthy scan.
 Service and Version Detection Scan
+
+UDP Scan
+
+<br />
+<br />
+<p align="center">
+<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/Service%20%26%20Version%20Detection%20Scan.PNG" height="65%" width="65%" alt="sV"/>
+</p>
+
+The UDP scan will report the state of each scanned UDP port where the status can be either "Open", "Closed" or "Filtered". If the status of a port is displayed as filtered then it indicates the presence of a firewall which is filtering the packets sent.
 
 <br />
 <br />
@@ -41,6 +61,29 @@ For instance, the output shows an open ftp port with the service version of vsft
 
 A quick search on this partcular service version will show that it is vulnerable to a backdoor command execution exploit.
 
+
+<h2>Scanning with NSE Scripts </h2>
+
+SQL Injection Vulnerability Scan
+
+<br />
+<br />
+
+<p align="center">
+<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
+</p>
+
+
+Cross Site Request Forgery Scan
+
+<br />
+<br />
+
+<p align="center">
+<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
+</p>
+
+Several CSRF vulnerabilities were detected by scanning with the http-csrf script. 
 
 # Output
 CVEScannerV2 will show all CVEs related to every _service-version_ discovered.
