@@ -18,6 +18,8 @@ This project is split into three repositories where this repository will provide
 - <b>Kali Linux</b> 
 - <b>[Metasploitable2https://github.com/joshmadakor1/4chan-Image-Analysis-Middleware-C964)</b> (Vulnerable Virtual Machine)
 
+https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/metasploitable_report.html
+
 
 <br />
 <br />
