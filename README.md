@@ -21,9 +21,9 @@ This project is split into three repositories where this repository will provide
 
 <h2>Performing Port Scans</h2>
 Service and Version Detection Scan
-
+<br />
 <p align="center">
-<img src="https://i.imgur.com/Q46tijN.png" height="65%" width="65%" alt="Frankie Grande, Ariana Grande et al. are posing for a picture"/>
+<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/Service%20%26%20Version%20Detection%20Scan.PNG" height="65%" width="65%" alt="sV"/>
 </p>
 
 
