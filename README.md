@@ -21,7 +21,7 @@ This project is split into three repositories where this repository will provide
 
 <h2>Performing Port Scans</h2>
 
-TCP SYN Scan
+<h3>TCP SYN Scan</h3>
 
 <br />
 <br />
@@ -41,6 +41,9 @@ Service and Version Detection Scan
 </p>
 
 The UDP scan will report the state of each scanned UDP port where the status can be either "Open", "Closed" or "Filtered". If the status of a port is displayed as filtered then it indicates the presence of a firewall which is filtering the packets sent.
+
+<br />
+<br />
 
 
 <h2>Service and Version Detection</h2>  
