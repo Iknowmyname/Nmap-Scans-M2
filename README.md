@@ -160,7 +160,7 @@ $ nmap -sV 192.168.74.133
 This scan is done to determine the services running on the open ports and also the version of those servies. By determining the version of the services ,the age of the software and potential vulnerabilities associated with that version can be identified.
 
 <details>
-    <summary><b>UDP_Scan output</b></summary>
+    <summary><b>Service&Version_Scan output</b></summary>
 
     Nmap scan report for 192.168.74.133
      Host is up (0.0025s latency).
@@ -432,7 +432,7 @@ $ sudo nmap -sV -p0-65535 --script vulners 192.168.74.133
 The sV flag is used for this particular scan as the vulners script would require information regarding the version of the service to determine the CVE based on the corresponding version. This script leverages the vulnerability database from Vulners.com to detect the known vulnerabilities. The output shows the vulnerabilities detected and also provides a link to the CVE in order to assess and determine the severity of the CVE.
 
 <details>
-    <summary><b>UDP_Scan output</b></summary>
+    <summary><b>Vulners_Scan output</b></summary>
 
     PORT      STATE SERVICE     VERSION
     21/tcp    open  ftp         vsftpd 2.3.4
