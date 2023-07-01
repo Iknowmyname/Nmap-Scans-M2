@@ -42,6 +42,9 @@ Service and Version Detection Scan
 
 The UDP scan will report the state of each scanned UDP port where the status can be either "Open", "Closed" or "Filtered". If the status of a port is displayed as filtered then it indicates the presence of a firewall which is filtering the packets sent.
 
+
+<h2>Service and Version Detection</h2>  
+
 <br />
 <br />
 <p align="center">
