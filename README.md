@@ -37,10 +37,9 @@ $ nmap -sS 192.168.74.133
 The TCP SYN Scan is the most widely used scan with Nmap. A TCP SYN packet will be sent to the vulnerable virtual machine's ports and if the port is open it will respond with a SYN-ACK packet back as an acknowledgement to say that the port is open. This scan does not establish a full TCP connection as Nmap will send a RST packet to erase the connection which makes it a quicka and stealthy scan.
 Service and Version Detection Scan
 
-TCP SYN Scan Output
 
 <details>
-    <summary><b>cvescannerv2.nse output</b></summary>
+    <summary><b>tcpsyn output</b></summary>
 
     Nmap scan report for 192.168.74.133
      Host is up (0.0025s latency).
