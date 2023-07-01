@@ -36,7 +36,7 @@ For instance, the output shows an open ftp port with the service version of vsft
 <br />
 
 <p align="center">
-<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/Service%20%26%20Version%20Detection%20Scan.PNG" height="65%" width="65%" alt="sV"/>
+<img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
 </p>
 
 A quick search on this partcular service version will show that it is vulnerable to a backdoor command execution exploit.
