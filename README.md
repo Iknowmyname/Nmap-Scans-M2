@@ -301,6 +301,109 @@ $ nmap -sV --script http-csrf 192.168.74.133
 <br />
 <br />
 
+Output:
+
+```bash
+
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.74.133
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.74.133:80/dvwa/
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: http://192.168.74.133:80/dvwa/login.php
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: http://192.168.74.133:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/passwd/TWiki/WebHome
+|     
+|     Path: http://192.168.74.133:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/passwd/Main/WebHome
+|     
+|     Path: http://192.168.74.133:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/edit/TWiki/
+|     
+|     Path: http://192.168.74.133:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/view/TWiki/TWikiSkins
+|     
+|     Path: http://192.168.74.133:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/manage/TWiki/ManagingWebs
+|     
+|     Path: http://192.168.74.133:80/mutillidae/index.php?page=html5-storage.php
+|     Form id: idform
+|     Form action: index.php?page=html5-storage.php
+|     
+|     Path: http://192.168.74.133:80/mutillidae/index.php?page=text-file-viewer.php
+|     Form id: id-bad-cred-tr
+|_    Form action: index.php?page=text-file-viewer.php
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2
+111/tcp  open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100005  1,2,3      40791/tcp   mountd
+|   100005  1,2,3      50629/udp   mountd
+|   100021  1,3,4      38182/udp   nlockmgr
+|   100021  1,3,4      57488/tcp   nlockmgr
+|   100024  1          39511/udp   status
+|_  100024  1          51977/tcp   status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+512/tcp  open  exec        netkit-rsh rexecd
+513/tcp  open  login       OpenBSD or Solaris rlogind
+514/tcp  open  tcpwrapped
+1099/tcp open  java-rmi    GNU Classpath grmiregistry
+1524/tcp open  bindshell   Metasploitable root shell
+2049/tcp open  nfs         2-4 (RPC #100003)
+2121/tcp open  ftp         ProFTPD 1.3.1
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+5900/tcp open  vnc         VNC (protocol 3.3)
+6000/tcp open  X11         (access denied)
+6667/tcp open  irc         UnrealIRCd
+8009/tcp open  ajp13       Apache Jserv (Protocol v1.3)
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.74.133
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.74.133:8180/admin/
+|     Form id: username
+|     Form action: j_security_check;jsessionid=BD605641BE10D84A9A74E4A209C87955
+|     
+|     Path: http://192.168.74.133:8180/jsp-examples/cal/login.html
+|     Form id: 
+|     Form action: cal1.jsp
+|     
+|     Path: http://192.168.74.133:8180/jsp-examples/error/error.html
+|     Form id: 
+|_    Form action: err.jsp
+|_http-server-header: Apache-Coyote/1.1
+MAC Address: 00:0C:29:E5:7E:AE (VMware)
+Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+
+
+```
+
 <p align="center">
 <img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
 </p>
