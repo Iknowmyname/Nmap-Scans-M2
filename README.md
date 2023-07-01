@@ -216,6 +216,8 @@ $ nmap --script http-sql-injection -p 80,443 192.168.74.133
 
 <br />
 
+Output: 
+
 ```bash
 
 PORT    STATE  SERVICE
