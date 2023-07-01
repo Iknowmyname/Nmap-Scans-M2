@@ -204,6 +204,8 @@ For instance, the output shows an open ftp port with the service version of vsft
 
 A quick search on this partcular service version will show that it is vulnerable to a backdoor command execution exploit. This vulnerability has a CVSS of 10.0 which is critical and could lead to severe consequences if not remediated immediately.
 
+<br />
+<br />
 
 <h2>Scanning with NSE Scripts </h2>
 
