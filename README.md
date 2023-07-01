@@ -65,7 +65,7 @@ For instance, the output shows an open ftp port with the service version of vsft
 <img src="https://github.com/Iknowmyname/Nmap-Scans-M2/blob/main/vsftpd%202.3.4%20CVE.PNG" height="65%" width="65%" alt="sV"/>
 </p>
 
-A quick search on this partcular service version will show that it is vulnerable to a backdoor command execution exploit.
+A quick search on this partcular service version will show that it is vulnerable to a backdoor command execution exploit. This vulnerability has a CVSS of 10.0 which is critical and could lead to severe consequences if not remediated immediately.
 
 
 <h2>Scanning with NSE Scripts </h2>
