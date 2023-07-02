@@ -16,7 +16,7 @@ This project is split into three repositories where this repository will provide
 <h2>Virtual Machines Used</h2>
 
 - <b>Kali Linux</b> 
-- <b>[Metasploitable2https]://docs.rapid7.com/metasploit/metasploitable-2/)</b> (Vulnerable Virtual Machine)
+- <b>[Metasploitable2}https://docs.rapid7.com/metasploit/metasploitable-2/)</b> (Vulnerable Virtual Machine)
 
 
 
